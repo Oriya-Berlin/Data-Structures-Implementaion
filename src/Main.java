@@ -7,7 +7,7 @@ import LinkedList.Node;
 
 public class Main {
 
-    
+
     private static void print(LinkedList linkedList){
 
         Node current = linkedList.head;
@@ -26,7 +26,7 @@ public class Main {
         ///////////////////////////////////////// *** List *** /////////////////////////////////////////////////////////
 
 /*
-        List.List myList = new List.List();
+        List myList = new List();
 
         myList.Add("ola1");
         myList.Add("ola2");
@@ -74,8 +74,9 @@ public class Main {
 
         System.out.println(tree.contains(64.0));
         System.out.println(tree.contains(15.0));
-        tree.print();
-
+        tree.print("ascending");
+        System.out.println();
+        tree.print("descending");
 
 
 

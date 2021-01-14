@@ -85,23 +85,39 @@ public class BinaryTree{
     }
 
 
-    // TODO: from min to max and from max to min
-    public void print(){ // add the string here
-        printR(root);
+
+    public void print(String order){
+
+        if(order.equals("ascending"))
+            printAscending(root);
+
+        if(order.equals("descending"))
+            printDescending(root);
     }
 
 
-
-    private void printR(Node node){
+    // Ascending order
+    private void printAscending(Node node){
 
         if(node == null)
             return;
 
-        printR(node.Left);
+        printAscending(node.Left);
         System.out.println(node.Data);
-        printR(node.Right);
+        printAscending(node.Right);
     }
 
+
+    // Descending order
+    private void printDescending(Node node){
+
+        if(node == null)
+            return;
+
+        printDescending(node.Right);
+        System.out.println(node.Data);
+        printDescending(node.Left);
+    }
 
 
 
