@@ -1,5 +1,7 @@
 import BinaryTree.BinaryTree;
 import BinaryTree.BinaryTreeAlreadyHasAnItemWithTheSameSortingOrderException;
+import HashTable.HashTable;
+import JustForTests.Person;
 import LinkedList.IndexOutOfLinkedListException;
 import LinkedList.LinkedList;
 import LinkedList.Node;
@@ -25,6 +27,7 @@ public class Main {
 
         ///////////////////////////////////////// *** List *** /////////////////////////////////////////////////////////
 
+
 /*
         List myList = new List();
 
@@ -48,7 +51,9 @@ public class Main {
         }
 */
 
+
         ///////////////////////////////////////// *** Linked List *** //////////////////////////////////////////////////
+
 
 /*
         LinkedList numbers = new LinkedList();
@@ -68,6 +73,7 @@ public class Main {
         ///////////////////////////////////////// *** Binary Tree *** //////////////////////////////////////////////////
 
 
+/*
         BinaryTree tree = new BinaryTree();
         for (double d: new double[]{54, 45, 76, 65, 78, 64, 68})
             tree.add(d);
@@ -77,16 +83,21 @@ public class Main {
         tree.print("ascending");
         System.out.println();
         tree.print("descending");
+*/
 
 
+        ///////////////////////////////////////// *** Hash Table *** ///////////////////////////////////////////////////
 
 
+        // TODO: we need to test it and also change some stuff in the classes
+        HashTable myHashTable = new HashTable(100);
+        myHashTable.add(new Person("yossi", 20, "000"));
+        myHashTable.add(new Person("avi", 30, "123"));
+        myHashTable.add(new Person("moshe", 40, "456"));
 
-
-
-
-
-
+        System.out.println(myHashTable.contains(new Person("moshe", 40, "456")));
+        System.out.println(myHashTable.contains(new Person("noam", 50, "456")));
+        System.out.println(myHashTable.contains(new Person("noam", 40, "666")));
 
 
     }

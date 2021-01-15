@@ -1,5 +1,8 @@
 package HashTable;
 
+
+// TODO: make it generic for any type
+
 public class HashTable {
 
 
@@ -45,7 +48,20 @@ public class HashTable {
     }
 
 
+    //
+    public boolean contains(Object data){
 
+        int index = calculateHashCode(data);
+        Node current = items[index];
+
+        while (current != null){
+
+            if(current.data.equals(data))
+                return true;
+            current = current.next;
+        }
+        return false;
+    }
 
 
 
