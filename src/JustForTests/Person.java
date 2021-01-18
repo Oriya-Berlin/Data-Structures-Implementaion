@@ -21,6 +21,9 @@ public class Person{
         if(obj == null)
             return false;
 
+        if(obj.getClass() != Person.class)
+            return false;
+
         Person otherPerson = (Person) obj;
 
         return this.id.equals(otherPerson.id);

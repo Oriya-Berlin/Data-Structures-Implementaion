@@ -89,11 +89,19 @@ public class Main {
         ///////////////////////////////////////// *** Hash Table *** ///////////////////////////////////////////////////
 
 
-        // TODO: we need to test it and also change some stuff in the classes
-        HashTable myHashTable = new HashTable(100);
+        HashTable myHashTable = new HashTable(20);
+
         myHashTable.add(new Person("yossi", 20, "000"));
         myHashTable.add(new Person("avi", 30, "123"));
         myHashTable.add(new Person("moshe", 40, "456"));
+        myHashTable.add(new Person("tal", 50, "457"));
+        myHashTable.add(new Person("kobi", 60, "458"));
+        myHashTable.add(new Person("tobi", 70, "323"));
+        myHashTable.add(new Person("koral", 80, "227"));
+        myHashTable.add(new Person("carmel", 90, "478"));
+        myHashTable.add(new Person("eli", 100, "420"));
+        myHashTable.add(new Person("amir asd", 110, "300"));
+
 
         System.out.println(myHashTable.contains(new Person("moshe", 40, "456")));
         System.out.println(myHashTable.contains(new Person("noam", 50, "456")));
